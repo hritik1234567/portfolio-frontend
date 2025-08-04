@@ -1,9 +1,18 @@
 // sections/IntroductionSection.jsx
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
+// Adjust the path to your CV file
 // import profileImg from '../public/images/yourphoto.jpg';
 
 export default function IntroductionSection() {
+    const downloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '/files/Resume.pdf';
+    link.download = 'Ritikresume.pdf'; // The filename when downloaded
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <section
       id="about"
@@ -14,20 +23,25 @@ export default function IntroductionSection() {
           Hi, I'm <span className="text-emerald-400">Hritik Raheja</span>
         </h1>
         <TypeAnimation
-        sequence={[
+          sequence={[
             'A passionate Developer.', 2000,
             'Building web apps.', 2000,
             'Lifelong Learner.', 2000,
-        ]}
-        wrapper="span"
-        speed={50}
-        repeat={Infinity}
-        className="text-2xl font-semibold"
-        style={{ display: 'inline-block' }}
+          ]}
+          wrapper="span"
+          speed={50}
+          repeat={Infinity}
+          className="text-2xl font-semibold"
+          style={{ display: 'inline-block' }}
         />
         <p className="text-lg">
           {`Welcome to my portfolio! Here you'll find my work, experience, and how to reach me.`}
         </p>
+        <button
+        onClick={downloadCV}
+        className="inline-block mt-4 px-6 py-3 bg-emerald-400 text-black font-semibold rounded hover:bg-emerald-500 transition-colors duration-300">
+        Download PDF               
+        </button>
       </div>
       <div className="flex-1 flex justify-center">
         <img

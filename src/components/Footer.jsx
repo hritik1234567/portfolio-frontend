@@ -2,6 +2,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
 
 export default function Footer() {
+    
   return (
     <footer className="bg-gradient-to-t from-indigo-950 to-indigo-800 text-white py-8">
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
@@ -54,6 +55,7 @@ export default function Footer() {
       </div>
       {/* Optional thin emerald underline */}
       <div className="max-w-6xl mx-auto mt-6 border-t border-emerald-700 opacity-30"></div>
+      
     </footer>
   );
 }
