@@ -14,7 +14,7 @@ export default function ContactForm() {
     e.preventDefault();
     setStatus('pending');
     try {
-      await axios.post('http://localhost:8000/api/contact', formData);
+      await axios.post('https://portfolio-web-j5ks.onrender.com/api/contact', formData);
       setStatus('success');
       setFormData({ name: '', email: '', message: '' });
       setTimeout(() => {

@@ -22,7 +22,7 @@ export default function ScheduleCall() {
     setError(null);
     try {
       // Replace '/api/schedule' with your actual backend endpoint URL
-      await axios.post('http://localhost:8000/api/schedule', { date, time, email });
+      await axios.post('https://portfolio-web-j5ks.onrender.com/api/schedule', { date, time, email });
       
       setSubmitted(true);
       // Optionally clear inputs:
